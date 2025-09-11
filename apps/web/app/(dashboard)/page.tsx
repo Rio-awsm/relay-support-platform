@@ -2,10 +2,7 @@
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { api } from "@workspace/backend/_generated/api";
 import { Button } from "@workspace/ui/components/button";
-import {
-  useMutation,
-  useQuery
-} from "convex/react";
+import { useMutation, useQuery } from "convex/react";
 
 export default function Page() {
   const users = useQuery(api.users.getMany);
@@ -16,9 +13,8 @@ export default function Page() {
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-2xl font-bold">
             app/web <UserButton />
-            <OrganizationSwitcher hidePersonal={true} />
           </h1>
-
+          <OrganizationSwitcher hidePersonal={true} />
           <Button onClick={() => addUser()}>Add user</Button>
         </div>
       </div>
