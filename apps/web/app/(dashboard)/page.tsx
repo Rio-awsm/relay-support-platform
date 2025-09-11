@@ -20,7 +20,6 @@ export default function Page() {
           </h1>
 
           <Button onClick={() => addUser()}>Add user</Button>
-          {JSON.stringify(users)}
         </div>
       </div>
     </>
